@@ -1,32 +1,55 @@
 <!DOCTYPE html>
-
-<html>
-  <head>
-    <title>URL Shortener Microservice | freeCodeCamp.org</title>
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://cdn.freecodecamp.org/universal/favicons/favicon-16x16.png"
-    />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔗</text></svg>">
     <link href="/public/style.css" rel="stylesheet" type="text/css" />
-  </head>
 
-  <body>
-    <h1>URL Shortener Microservice</h1>
-    <main>
-      <section>
-        <form action="api/shorturl" method="POST">
-          <fieldset>
-            <legend>URL Shortener</legend>
-            <label for="url_input">URL:</label>
-            <input id="url_input" type="text" name="url" placeholder="https://www.freecodecamp.org/" />
-            <input type="submit" value="POST URL" />
-          </fieldset>
+</head>
+<body>
+    <div class="container">
+        <h1>URL Shortener</h1>
+        
+        <p class="description">
+            Paste your URL below and get a shortened version.
+        </p>
+        
+        <form id="shortenForm" action="api/shorturl" method="POST">
+            <div class="input-group">
+                <input 
+                    id="url_input" 
+                    type="text" 
+                    name="url" 
+                    placeholder="https://www.freecodecamp.org/" 
+                    required
+                >
+                <input type="submit" value="Shorten URL">
+            </div>
         </form>
-      </section>
-    </main>
+        
+        
+        <div class="examples">
+            <h3>Example Usage</h3>
+            
+
+            
+            <div class="example-item">
+                <p><strong> </strong>Use Short URL:</strong></p>
+                <p>Visit: <code>/api/shorturl/1</code></p>
+                <p>Will redirect to: <code>https://www.google.com</code></p>
+            </div>
+            
+            
+        </div>
+    </div>
+    
     <footer>
-      <p>By <a href="https://www.freecodecamp.org/">freeCodeCamp</a></p>
+        <p>Built for <a href="https://www.freecodecamp.org/">freeCodeCamp</a> Back End Development Certification</p>
+        <p>View Code source on  <a href="https://github.com/chaima252/boilerplate-project-urlshortener.git">Github</a> </p>
     </footer>
-  </body>
+
+
+</body>
 </html>
